@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    build: ./mysql-test/
+    ports: 
+      - 3306:3306
+    volumes:
+      - ./mysql-test/initdb.d:/docker-entrypoint-initdb.d # 初期処理フォルダ
+      - ./mysql-test/db:/var/lib/mysql # データ永続化フォルダ
+    image: mysql
+    container_name: "mysql-test"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
