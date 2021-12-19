@@ -1,6 +1,6 @@
 # test-app　<- Docker-composeのテスト用
 
-業務にてVue.jsを導入するための技術検証用。
+業務にてDockerを導入するための検証用。
 
 
 ■Docker-compose対象コンテナ
