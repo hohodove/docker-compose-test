@@ -1,4 +1,5 @@
-# test-app　<- Docker-composeのテスト用
+# test-app
+## docker-composeのテスト用リポジトリ
 
 業務にてDockerを導入するための検証用。
 
@@ -30,4 +31,5 @@ connect testdb;
 show tables;
 desc employee;
 select * from employee;
+select * from users;
 ```
