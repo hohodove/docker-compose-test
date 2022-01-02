@@ -7,6 +7,18 @@ services:
     ports:
       - 8080:80
     image: test-app_nginx
+    container_name: "test-app_nginx"
+
+  tomcat:
+    build:
+      context: .
+      dockerfile: ./tomcat/Dockerfile
+    ports:
+      - 8081:8080
+    image: test-app_tomcat
+    container_name: "test-app_tomcat"
+    networks:
+      - test-app-network
 
   mysql:
     build:
@@ -18,6 +30,12 @@ services:
       - ./mysql-test/initdb.d:/docker-entrypoint-initdb.d # 初期処理フォルダ
       - ./mysql-test/db:/var/lib/mysql # データ永続化フォルダ
     image: test-app_mysql
-    container_name: "mysql-test"
+    container_name: "test-app_mysql"
     environment:
       - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - test-app-network
+
+networks:
+  test-app-network:
+    driver: bridge
