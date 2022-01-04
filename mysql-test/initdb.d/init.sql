@@ -22,5 +22,4 @@ create table users
   password VARCHAR(500) not null
 );
 
-INSERT INTO users (username, password) VALUE  ("testuser", 
-"$2a$10$ioYmeDllTlx0mI4Vz2Iygep2rmH5gA6qKoPEuIHqVK5lWcgADPDgK");
+INSERT INTO users (username, password) VALUE  ("testuser", "$2a$10$ioYmeDllTlx0mI4Vz2Iygep2rmH5gA6qKoPEuIHqVK5lWcgADPDgK");

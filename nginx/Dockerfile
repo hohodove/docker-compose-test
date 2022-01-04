@@ -11,6 +11,6 @@ FROM nginx:1.21.5-alpine as production-stage
 
 RUN mkdir /app
 COPY --from=build-stage /app/dist /var/www/html
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/config/nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

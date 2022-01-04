@@ -3,6 +3,7 @@ docker-composeのテスト用リポジトリ
 
 ## Docker-compose対象コンテナ
 - Nginx
+- Tomcat
 - MySQL
 
 ## Dockerイメージのビルド(初期構築時のみ)
